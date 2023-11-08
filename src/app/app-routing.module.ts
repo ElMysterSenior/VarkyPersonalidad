@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { FormContactComponent } from './form-contact/form-contact.component';
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
@@ -23,6 +24,12 @@ const routes: Routes = [
         path: 'login',
         component: LoginComponent
     },
+    {
+        path: 'form-contact',
+        component: FormContactComponent,
+        canActivate:[AuthGuard]
+    },
+
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

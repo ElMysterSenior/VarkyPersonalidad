@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
@@ -13,19 +13,25 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
+import { FormContactComponent } from './form-contact/form-contact.component';
+import { TestVarkComponent } from './test-vark/test-vark.component';
+
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         AdminComponent,
-        LoginComponent
+        LoginComponent,
+        FormContactComponent,
+        TestVarkComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
