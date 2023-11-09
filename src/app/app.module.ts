@@ -15,6 +15,7 @@ import { AdminComponent } from './admin';
 import { LoginComponent } from './login';
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { TestVarkComponent } from './test-vark/test-vark.component';
+import { TestPersonalidadComponent } from './test-personalidad/test-personalidad.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TestVarkComponent } from './test-vark/test-vark.component';
         AdminComponent,
         LoginComponent,
         FormContactComponent,
-        TestVarkComponent
+        TestVarkComponent,
+        TestPersonalidadComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

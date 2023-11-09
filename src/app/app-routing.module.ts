@@ -8,6 +8,7 @@ import { LoginComponent } from './login';
 import { AuthGuard } from './_helpers';
 import { Role } from './_models';
 import { TestVarkComponent } from './test-vark/test-vark.component';
+import { TestPersonalidadComponent } from './test-personalidad/test-personalidad.component';
 
 const routes: Routes = [
     {
@@ -33,6 +34,11 @@ const routes: Routes = [
     {
         path: 'test-vark',
         component: TestVarkComponent,
+        canActivate:[AuthGuard]
+    },
+    {
+        path: 'test-personalidad',
+        component: TestPersonalidadComponent,
         canActivate:[AuthGuard]
     },
 
